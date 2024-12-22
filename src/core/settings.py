@@ -1,4 +1,7 @@
 import os
+from dotenv import load_dotenv
+
+load_dotenv()
 
 DATABASE_URI = f'postgres://{os.environ.get("POSTGRES_USER")}:' \
                f'{os.environ.get("POSTGRES_PASSWORD")}@' \
