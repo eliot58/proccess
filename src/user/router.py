@@ -35,7 +35,7 @@ async def deposit(tg_id: str, data: DepositSchemas):
     if not user:
         raise HTTPException(status_code=404, detail="User not found")
     
-    return f"ton://transfer/{DEPOSIT_ADDRESSES}?amount={data.amount * 1000000000}&text={user.id}"
+    return f"ton://transfer/{DEPOSIT_ADDRESSES[data.currency.value]}?amount={data.amount * 1000000000}&text={user.id}"
 
 @router.post("/withdraw/{tg_id}/")
 async def withdraw(tg_id: str, data: WithdrawSchemas, api_key_header: str = Security(api_key_header)):

@@ -8,9 +8,9 @@ DATABASE_URI = f'postgres://{os.environ.get("POSTGRES_USER")}:' \
 API_KEY = os.environ.get("API_KEY", "test")
 
 DEPOSIT_ADDRESSES = {
-    "ton": "",
-    "not": "",
-    "usdt": ""
+    "toncoin": "",
+    "notcoin": "",
+    "tether": ""
 }
 
 APPS_MODELS = [
